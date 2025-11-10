@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Animations from './pages/Animations';
 import { useLenis } from './hooks/useLenis';
 import './index.css';
-import PageDesk from './pages/PageDesk.jsX';
+import PageDesk from './pages/PageDesk.jsx';
 import Templates from './pages/Templates';
 import Components from './pages/Components';
 
