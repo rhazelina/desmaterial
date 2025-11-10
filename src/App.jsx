@@ -6,7 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Animations from './pages/Animations';
 import { useLenis } from './hooks/useLenis';
-import './Index.css';
+import './index.css';
 import PageDesk from './pages/PageDesk.jsX';
 import Templates from './pages/Templates';
 import Components from './pages/Components';
