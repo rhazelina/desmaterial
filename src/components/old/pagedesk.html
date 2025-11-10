@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Zetachune</title>
+  <link rel="shortcut icon" href="/public/SaberTp.png" type="image/x-icon" />
+
+  <!-- Tailwind CDN (unchanged) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome (unchanged) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    /* Visual helpers only (no JS/function changes) */
+    .card { border-radius: 1rem; border: 1px solid rgb(41 37 36 / .7); background: transparent; box-shadow: 0 1px 2px 0 rgb(0 0 0 / .20); }
+    .card:hover { box-shadow: 0 20px 30px -12px rgb(0 0 0 / .35), 0 8px 10px -6px rgb(0 0 0 / .25); transform: translateY(-2px); transition: box-shadow .25s ease, transform .25s ease; }
+    .chip { border: 1px solid rgb(41 37 36 / .7); border-radius: 9999px; padding: .25rem .6rem; font-size: .75rem; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
+  <!-- Navigation (style aligned to your screenshot) -->
+  <nav class="bg-white/80 backdrop-blur border-b border-stone-200/70 dark:bg-stone-950/80 dark:border-stone-800/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a class="flex items-center" href="#">
+          <img class="h-8 w-8 rounded" src="/public/SaberTp.png" alt="Zetachune Logo" />
+          <span class="ml-2 text-xl font-semibold tracking-tight">Zetachune</span>
+        </a>
+        <div class="hidden md:flex md:items-center md:space-x-2">
+          <a href="#" class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium text-stone-100 bg-stone-800/60 hover:bg-stone-700/70 dark:text-white">Home</a>
+          <div class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium text-stone-200 bg-stone-800/40 hover:bg-stone-700/60">Resources <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></div>
+          <div class="hidden lg:flex items-center ml-2">
+            <div class="relative">
+              <input type="search" placeholder="Search..." class="h-9 w-64 rounded-full border border-stone-700/50 bg-stone-900/60 pl-9 pr-3 text-sm placeholder:text-stone-400 focus:ring-2 focus:ring-stone-500 text-stone-100" />
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-xs text-stone-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Info Banner (rounded pill, dark-friendly) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+    <div class="rounded-2xl border border-blue-200/80 bg-blue-50/60 p-4 shadow-sm dark:border-blue-900/40 dark:bg-blue-950/40">
+      <div class="flex items-start gap-3">
+        <svg class="h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+        </svg>
+        <p class="text-sm text-blue-800 dark:text-blue-200"><span class="font-medium">Info</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, dignissimos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Title -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold">Content Title</h1>
+      <p class="mt-4 text-lg text-stone-600 dark:text-stone-300">Minimal, consistent spacing and typography across the page.</p>
+    </div>
+  </section>
+
+  <!-- Main Content: Embed (left) / Explanation (right) -->
+  <section class="pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <!-- Instagram Embed (IDs & function preserved) -->
+        <article class="card p-6 bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800">
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold">Embedded video</h2>
+            <span class="chip text-stone-600 dark:text-stone-300 bg-white/5">Instagram</span>
+          </div>
+          <label for="ig-url" class="sr-only">Instagram URL</label>
+          <div class="mt-3 flex gap-2">
+            <input id="ig-url" type="url" inputmode="url" placeholder="https://www.instagram.com/reel/..." 
+                   class="h-11 flex-1 rounded-xl border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-950 px-3 text-sm shadow-sm outline-none placeholder:text-stone-400 focus:ring-2 focus:ring-stone-500 text-stone-900 dark:text-stone-100" 
+                   value="" />
+            <button id="ig-embed" class="h-11 rounded-xl border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 px-3 text-sm font-medium shadow-sm hover:bg-stone-100 dark:hover:bg-stone-800">
+              Embed
+            </button>
+          </div>
+          <p class="mt-2 text-xs text-stone-500 dark:text-stone-400">Catatan: Instagram mencegah direct MP4 hotlink. Gunakan preview kartu di bawah, atau buka di Instagram.</p>
+          <div id="ig-embed-target" class="mt-4 rounded-2xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950/40 p-4 text-center">
+            <p class="text-sm text-stone-500 dark:text-stone-400">Instagram embed preview will appear here</p>
+          </div>
+          <p class="mt-3 text-xs text-stone-500 dark:text-stone-400">Jika preview tidak muncul, pastikan URL publik dan tidak private. Anda juga bisa klik tautan untuk membuka di Instagram.</p>
+        </article>
+
+        <!-- Explanation (manual) -->
+        <article class="card p-6 bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800">
+          <h2 class="text-base font-semibold">Explanation</h2>
+          <div class="mt-4 space-y-4 text-stone-700 dark:text-stone-300 leading-relaxed">
+            <p>Tulis penjelasan materi di sini. Jaga paragraf tetap singkat dan fokus pada nilai yang disampaikan video.</p>
+            <p>Gunakan contoh seperlunya, dan beri <em>highlight</em> pada istilah penting agar mudah dipindai.</p>
+            <p>Tambahkan CTA sederhana di akhir—mis. ajak pembaca mencoba tips, atau kunjungi sumber terkait.</p>
+          </div>
+          <div class="mt-4 rounded-2xl border border-indigo-200/60 bg-indigo-50 p-4 dark:border-indigo-900/40 dark:bg-indigo-950/40">
+            <h4 class="font-medium text-indigo-800 dark:text-indigo-300">Pro Tip</h4>
+            <p class="mt-1 text-sm text-indigo-700 dark:text-indigo-300/90">Gunakan heading kecil untuk memecah konten panjang agar lebih nyaman dibaca.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer class="border-t border-stone-200/70 dark:border-stone-800/70 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <p class="text-xs text-stone-500 dark:text-stone-400">© 2025 OPEN SOURCE CODE, USEABLE</p>
+    </div>
+  </footer>
+
+  <!-- FUNCTIONS KEPT EXACTLY THE SAME -->
+  <script>
+    // Simple Instagram embed functionality
+    document.getElementById('ig-embed').addEventListener('click', function() {
+        const url = document.getElementById('ig-url').value;
+        const target = document.getElementById('ig-embed-target');
+        
+        if (url) {
+            target.innerHTML = `
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <p class="text-sm text-indigo-700 font-medium">Instagram Embed Preview</p>
+                    <p class="mt-2 text-xs text-indigo-600">URL: ${url}</p>
+                    <p class="mt-2 text-xs text-gray-500">In a real implementation, this would show the actual Instagram embed.</p>
+                    <div class="mt-3 flex justify-center">
+                        <a href="${url}" target="_blank" class="inline-flex items-center px-3 py-1 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Open in Instagram
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+    });
+  </script>
+</body>
+</html>
